@@ -1,0 +1,49 @@
+{
+  "name": "mindlet-web",
+  "description": "Mindlet Web",
+  "author": "Mindlet",
+  "type": "module",
+  "main": "main.cjs",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "start-electron": "electron .",
+    "build-electron": "astro build && electron .",
+    "dist-electron": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^4.16.9",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8"
+  },
+
+
+  "build": {
+  "appId": "com.exemple.monapp",
+  "directories": {
+    "output": "release"  
+  },
+  "files": [
+    "dist/**/*",
+    "main.cjs"
+  ],
+  "mac": {
+    "target": "dmg"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
+}
+
+}
