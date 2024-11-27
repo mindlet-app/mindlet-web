@@ -1,0 +1,16 @@
+---
+interface Props {
+  imageSrcGameMod: string;
+  imageAltGameMod: string;
+}
+
+const { imageSrcGameMod, imageAltGameMod } = Astro.props;
+---
+
+<div class="bg-white w-32 h-32 rounded-md cursor-pointer">
+  <img
+    class="w-full h-full object-cover rounded-md p-2"
+    src={imageSrcGameMod}
+    alt={imageAltGameMod}
+  />
+</div>
