@@ -1,65 +1,19 @@
 ---
+import SearchInput from "../components/SearchInput.astro";
 import Layout from "../layouts/Layout.astro";
-import ChangeCollection from "../icons/ChangeCollection.astro";
-import GameMod from "../components/GameMod.astro";
-import Collection from "../components/Collection.astro";
-import StatCollection from "../components/StatCollection.astro";
-import MindletLogo from "../icons/MindletLogo.astro";
-import AnimatedGradientText from "../components/AnimatedGradientText.astro";
-import PanelLeftOpen from "../icons/PanelLeftOpen.astro";
+import AvatarWithUsername from "../components/AvatarWithUsername.astro";
+import Following from "../components/Following.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="flex items-center gap-4 p-2 justify-center " >
-    <MindletLogo width={50} color="#1FDB99" />
-    <h1 class="text-3xl relative top-1">Mindlet</h1>
-  </div>
-
-  <AnimatedGradientText color1="#1FDB99" color2="#0062E6" color3="#1FDB99">
-    <h1>Apprendre & Progresser <br />ensemble</h1>
-  </AnimatedGradientText>
-
-<section class="grid grid-cols-2 gap-4 
- p-3 rounded-md border-4 border-warning">
-  <div>
-    <h1>Lancer un entraînement</h1>
-    <div class="flex gap-2">
-      <GameMod
-        imageSrcGameMod="/images/placeholder.png"
-        imageAltGameMod="lorem"
-      />
-      <GameMod
-        imageSrcGameMod="/images/placeholder.png"
-        imageAltGameMod="lorem"
-      />
-      <GameMod
-        imageSrcGameMod="/images/placeholder.png"
-        imageAltGameMod="lorem"
-      />
-    </div>
-  </div>
-  <div>
-    <div class="flex w-full justify-between">
-      <h1>Entraînement avec</h1>
-      <button class="btn btn-primary btn-sm text-mindlet-white">
-        <ChangeCollection /> Changer
-      </button>
-    </div>
-    <div class="flex items-center">
-      <div class="w-2/3">
-        <Collection
-          title="Collection 1"
-          visibilty="Public"
-          numberOfFlashcards={10}
-          pseduo="Pseudo"
-          srcImageProfil="/images/placeholder.png"
-          srcImageCollection="/images/placeholder.png"
-        />
+  <SearchInput />
+  <section class="w-full h-full grid grid-cols-5 gap-4">
+    <section class="col-span-3 bg-slate-300"></section>
+    <section class="col-span-2 bg-red-500 p-2">
+      <div>
+        <AvatarWithUsername />
+        <Following />
       </div>
-      <div class="w-1/3">
-        <StatCollection />
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </section>
 </Layout>

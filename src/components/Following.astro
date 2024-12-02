@@ -1,0 +1,17 @@
+---
+import { CircleUser, ChevronRight } from "lucide-astro";
+import AvatarGroupWithCounter from "./AvatarGroupWithCounter.astro";
+---
+
+<div
+  class="w-full bg-neutral-100 rounded-md flex items-center justify-between px-2 py-1"
+>
+  <div class="flex gap-2">
+    <CircleUser />
+    <p>Vos suivis</p>
+  </div>
+  <div class="flex items-center">
+    <AvatarGroupWithCounter />
+    <ChevronRight />
+  </div>
+</div>

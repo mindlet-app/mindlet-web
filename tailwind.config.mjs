@@ -4,8 +4,8 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      animation: {
-        gradient: "gradient 8s linear infinite",
+			animation: {
+        'gradient': 'gradient 8s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -30,6 +30,8 @@ export default {
           neutral: "#1E1F22",
 
           "base-100": "#EAF5FF",
+
+          "base-200": "#C7D2FE",
 
           info: "#85B8EF",
 
